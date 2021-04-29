@@ -1,0 +1,19 @@
+Generate Keystore 
+
+
+keytool -genkey -v -keystore edonee.keystore -alias edonee -keyalg RSA -keysize 2048 -validity 10000
+
+======================================================
+Build Commands
+
+npx cap add android
+npx cap add ios
+
+-------------------
+npx cap sync
+cd android
+./gradlew assembleRelease
+
+jarsigner -keystore ./edonee.keystore -storepass edonee app-release-unsigned.apk edonee && zipalign 4 app-release-unsigned.apk app-release.apk
+
+REF: https://stablekernel.com/article/creating-keystores-and-signing-android-apps/

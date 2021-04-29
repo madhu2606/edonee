@@ -1,0 +1,79 @@
+<div class="header">
+    <div class="container">
+        <p class="header_head">
+            <i class="fa fa-chevron-left cust_arrow" (click)="back()"></i>Profile
+        </p>
+    </div>
+</div>
+<br />
+
+<div class="body">
+    <div class="container">
+        <div class="login_form">
+            <form [formGroup]="profileform" (ngSubmit)="updateProfie()">
+                <div class="form-group form_grp">
+                    <label for="usrname" class="page_label">Name</label>
+                    <input readonly type="text" formControlName="name" class="form-control form_fields" id="usrname" />
+                </div>
+                <div class="form-group form_grp">
+                    <label for="dob" class="page_label">DOB</label>
+                    <input type="date" formControlName="dob" class="form-control form_fields" id="age" />
+                </div>
+                <div class="form-group form_grp">
+                    <label for="age" class="page_label">Age</label>
+                    <input type="text" formControlName="age" class="form-control form_fields" id="usrname" />
+                </div>
+                <label for="gender" class="page_label" >Gender</label><br>
+                <div class="form-check form-check-inline">
+                    <input type="radio" class="form-check-input"  id="male" formControlName="gender"
+                    value="male" />
+                    <label for="male" class="form-check-label">Male</label><br />
+                       &nbsp;  &nbsp;  &nbsp;  &nbsp;
+                    <input type="radio"  class="form-check-input" id="female" formControlName="gender"
+                    value="female" />
+                    <label for="female" class="form-check-label">Female</label><br />
+                        
+                   
+                </div>
+                <div class="form-group form_grp">
+                    <label for="usr" class="page_label">Email</label>
+                    <input readonly type="text" formControlName="username" class="form-control form_fields" id="email" />
+                </div>
+                <div class="form-group form_grp">
+                    <label for="mobile" class="page_label">Mobile</label>
+                    <input type="text" formControlName="mobile" class="form-control form_fields" id="mobile" />
+                </div>
+                <div class="form-group form_grp">
+                    <label for="street" class="page_label">Street</label>
+                    <input type="text" formControlName="street" class="form-control form_fields" id="street" />
+                </div>
+                <div class="form-group form_grp">
+                    <label for="state" class="page_label">State</label>
+                    <input type="text" formControlName="state" class="form-control form_fields" id="state" />
+                </div>
+                <div class="form-group form_grp">
+                    <label for="country" class="page_label">Country</label>
+                    <input type="text" formControlName="country" class="form-control form_fields" id="country" />
+                </div>
+                <div class="form-group form_grp">
+                    <label for="college" class="page_label">College</label>
+                    <input type="text" formControlName="college" class="form-control form_fields" id="college" />
+                </div>
+                <div class="form-group form_grp">
+                    <label for="course" class="page_label">Course</label>
+                    <input type="text" readonly formControlName="course" class="form-control form_fields" id="course" />
+                </div>
+
+                <div class="form-group form_grp">
+                    <label for="refcode" class="page_label">Reference Code</label>
+                    <input  type="text" formControlName="refcode" class="form-control form_fields" id="refcode" />
+                </div>
+                <div class="sbt">
+                    <button id="login-sub">Save</button>
+                </div>
+            </form>
+            <br />
+        </div>
+    </div>
+</div>
+<app-bnav></app-bnav>

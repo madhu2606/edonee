@@ -1,0 +1,68 @@
+.page_head {
+    font-weight: 300;
+    line-height: 43px;
+    letter-spacing: -0.02em;
+    margin-top: 30px;
+}
+h2.page_head {
+    position: absolute;
+    left: 16%;
+    right: 20.29%;
+    top: 30%;
+    color: #FFFFFF;
+    width: 68%;
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 800;
+}
+.full_mob {
+    background: linear-gradient(180deg, #0093E9 0%, #3673CF 100%);
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+.main_img {
+    width: 96%;
+    position: absolute;
+    left: 2%;
+    right: 2%;
+    top: 10.8%;
+}
+button#register {
+    position: fixed;
+    bottom: 15%;
+    background: linear-gradient(270deg, #FFFFFF 0%, #FFFFFF 100%);
+    box-shadow: 0px 3px 16px rgb(0 0 0 / 16%);
+    left: 25%;
+    border: none;
+    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
+    color: #0093E9;
+    width: 50%;
+    padding: 15px 30px;
+    border-radius: 35px;
+    line-height: 18px;
+}
+p#login {
+    margin-bottom: 0px;
+    color: #ffffff;
+    font-weight: 600;
+    position: fixed;
+    bottom: 8%;
+    width: 50%;
+    left: 25%;
+    text-align: center;
+    cursor: pointer;
+}
+p#login:after {
+    content: "";
+    display: block;
+    background: #ffffff;
+    height: 2px;
+    width: 75px;
+    margin: 4px auto 0px auto;
+}

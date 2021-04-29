@@ -1,0 +1,222 @@
+.header {
+    height: 160px;
+    background: linear-gradient(180deg, #0093E9 0%, #3673CF 100%);
+}
+.user_name {
+    margin: 0px 15px;
+    padding: 30px 0px;
+    font-size: 24px;
+    line-height: 28px;
+    color: #ffffff;
+}
+.menu_icon {
+    float: right;
+    cursor: pointer;
+}
+.course_one {
+    background: url(../../assets/birthday.svg);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    border-radius: 8px;
+}
+.course_one1 {
+    /* background: url(../../assets/course1.svg); */
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: bottom;
+    border-radius: 8px;
+    background-color: #000000;
+}
+.course_head {
+    padding: 118px 25px 24px 25px;
+    margin-bottom: 0px;
+    color: #ffffff;
+}
+.sec_one p {
+    margin-bottom: 3px;
+    font-size: 15px;
+}
+.sec_one p img {
+	margin-left: 5px;
+}
+p.course_head {
+    font-size: 21px;
+    line-height: 30px;
+}
+p.course_head span {
+    font-size: 24px;
+    font-weight: 600;
+}
+.sec_one {
+    padding: 5px 15px 0px 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgb(0 147 233 / 12%);
+    position: absolute;
+    left: 4.35%;
+    right: 4.35%;
+    top: 13.53%;
+    bottom: 71.1%;
+    border-radius: 8px;
+    height: 210px;
+}
+.sec_two {
+    font-size: 15px;
+    font-weight: 600;
+}
+.sec_three {
+	font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 110px;
+}
+.sec_four {
+    margin-top: 180px;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.sec_two img, .sec_three img, .sec_four img {
+	margin-left: 5px;
+}
+.sub_course {
+    height: 200px;
+    background-repeat: no-repeat !important;
+    background-position-x: center !important;
+}
+p.sub_course_head {
+    margin-bottom: 0px;
+    color: #ffffff;
+    padding: 116px 17px 13px 5px;
+}
+.sec_two p, .sec_three p {
+    margin-bottom: 0px;
+}
+ul.course_ul {
+    list-style: none;
+    padding-left: 0px;
+}
+ul.course_ul li {
+    display: inline-block;
+    width: 30%;
+    margin: 0px 3px;
+}
+p.sub_course_head {
+    font-size: 16px;
+}
+p.sub_course_head span {
+    font-size: 12px;
+}
+.share_earn {
+    background: #0093E9;
+    height: 113px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    border-radius: 8px;
+    width: 97%;
+}
+.share_earn p {
+    padding: 17px 17px 10px 20px;
+    margin-bottom: 0px;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 15px;
+}
+.share_earn p img {
+    margin-right: 12px;
+    vertical-align: text-top !important;
+}
+.refer {
+    width: 90%;
+    margin: 0px auto;
+}
+input#earn_refer {
+    width: 100%;
+    height: 47px;
+    background: #F5F5F5;
+    color: #666666;
+    border: none;
+    font-size: 16px;
+    padding: 0px 12px;
+    border-radius: 8px;
+}
+img.share_icon {
+    float: right;
+    position: absolute;
+    right: 60px;
+    margin-top: 14px;
+}
+.footer_sec {
+    display: inline-block;
+    text-align: center;
+    width: 24%;
+}
+.full_footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 0px;
+    background: #ffffff;
+}
+.footer {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgb(0 147 233 / 12%);
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 90%;
+    margin: 0px auto;
+}
+.footer_sec span {
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+}
+
+/* menu css */
+section {
+    width: 100%;
+    min-height: 300px;
+}
+.pattern {
+    position: relative;
+    background: linear-gradient(180deg, #0093E9 0%, #3673CF 36.76%)
+}
+.pattern:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background: url(../../assets/wave3.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.geeks {
+    width: 90%;
+    margin: 0% auto;
+    padding: 30px 0px 125px 0px;
+}
+.geeks p {
+    margin-bottom: 30px;
+}
+.geeks p span{
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 28px;
+}
+.geeks p img {
+    float: right;
+    cursor: pointer;
+}
+ul.ul_menu {
+    list-style: none;
+    padding-left: 0px;
+}
+ul.ul_menu li {
+    padding: 10px 0px 10px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+}
+ul.ul_menu li a {
+    color: #ffffff;
+    font-size: 16px;
+}

@@ -1,0 +1,39 @@
+<div class="container">
+		<h2 class="page_head">Get Registered</h2>
+		<div class="social_icons">
+			<img src="../../assets/google.svg" alt="Google Logo"> Sign up with Google
+		</div>
+		<div class="border-line">
+			<ul class="border_set">
+				<li class="border_half"></li>
+				<li class="border_content">or</li>
+				<li class="border_half"></li>
+			</ul>
+		</div>
+		<div class="login_form">
+			<div *ngIf="shwmsg" class="form-group form_grp alert-info">{{msg}}</div>
+			<form  [formGroup]="RegisterForm"
+			(ngSubmit)="Register()">
+			<div class="form-group form_grp">
+				<label for="usr" class="page_label">Name</label>
+				<input type="text" formControlName="name" class="form-control form_fields" id="name">
+			</div>
+			<div class="form-group form_grp">
+				<label for="usr" class="page_label">Email</label>
+				<input type="text" formControlName="email" class="form-control form_fields" id="email">
+			</div>
+			<div class="form-group form_grp">
+				<label for="usr" class="page_label">Mobile</label>
+				<input type="text" formControlName="mobile" class="form-control form_fields" id="mobile">
+			</div>
+			<div class="form-group form_grp">
+				<label for="usr" class="page_label">Password</label>
+				<input type="text" formControlName="password" class="form-control form_fields" id="password">
+			</div>
+			<div class="sbt">
+				<button id="login-sub">Continue</button>
+			</div>
+		</form>			
+		</div>
+		<div class="new-user">Already a user? <span id="login" [routerLink]="['/login']" routerLinkActive="router-link-active" >Login</span></div>
+	</div>

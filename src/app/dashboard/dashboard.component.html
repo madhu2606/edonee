@@ -1,0 +1,80 @@
+<div class="header"  *ngIf="!showMenu">
+    <div class="user_name">Hello  {{userdetails.data.userName}}<img (click)="showMenu = !showMenu" src="../../assets/menu_bar.svg" alt="Menu_bar" class="menu_icon"></div>
+</div>
+
+<div class="body" *ngIf="!showMenu">
+    <div class="container">
+        <div class="sec_one">
+            <div class="course_one" *ngIf="isbday">
+                <p class="course_head">Have a great day<br><span>{{userdetails.data.userName }}</span></p>
+            </div>
+            <span *ngIf="lastCourse.length != 0" >
+            
+            <p *ngIf="!isbday">Continue where you left <img src="../../assets/book.svg" alt="Book"></p>
+            <div *ngIf="!isbday" (click)='gotoCourse(lastCourse[0].last_viewed.course_id)'  class="course_one1" style="background: url({{lastCourse[0].last_viewed.imageUrl}});  background-repeat: no-repeat; background-position-x: center;    background-position-y: bottom; border-radius: 8px;  background-color: #000000;">
+                <p class="course_head">{{lastCourse[0].last_viewed.subject  }}</p>
+            </div>
+            </span>
+
+            <span *ngIf="lastCourse.length == 0"> 
+            <p *ngIf="!isbday">&nbsp;</p>
+            <div *ngIf="!isbday" class="course_one1">
+                <p class="course_head">Start a new Course</p>
+            </div>
+
+            </span>
+           
+        </div>
+        <div  class="sec_four">
+            <p *ngIf="isbday">Continue where you left <img src="../../assets/book.svg" alt="Book"></p>
+            <div *ngIf="isbday" class="course_one1" style="background: url({{lastCourse[0].last_viewed.imageUrl}});  background-repeat: no-repeat; background-position-x: center;    background-position-y: bottom; border-radius: 8px;  background-color: #000000;"> 
+                 <p class="course_head">{{lastCourse[0].last_viewed.subject}}</p>
+            </div>
+        </div>
+        
+        <div class="sec_two" *ngIf="RecomCourse != null " >
+            <p *ngIf="RecomCourse != null ">Recommended Courses  <img src="../../assets/book.svg" alt="Book"></p>
+            <ul class="course_ul" *ngIf="RecomCourse != null ">
+                <li  *ngFor="let i of RecomCourse" (click)='gotoCourse(i.course_id)'>
+                    <div class="sub_course" style="background: url({{i.imageUrl}});">
+                        <p class="sub_course_head">{{i.subject}}</p>
+                    </div>
+                </li>
+              
+            </ul>
+        </div>
+        <div class="share_earn">
+            <p><img src="../../assets/refer.svg"> Refer and Earn</p>
+            <img src="../../assets/share.svg" alt="Share" (click)='share()' class="share_icon">
+            <div class="refer">
+                <input type="text"  readonly id="earn_refer" value="edonee.com/refer/{{userdetails.data.refer_earn}}">
+            </div>
+        </div>
+        <div class="sec_three">
+            <p>Courses <img src="../../assets/book.svg" alt="Book"></p>
+            <ul class="course_ul">
+                <li  *ngFor="let i of allcourses" (click)='gotoCourse(i.course_id)'>
+                    <div class="sub_course" style="background: url({{i.imageUrl}});">
+                        <p class="sub_course_head">{{i.subject}}</p>
+                    </div>
+                </li>
+               
+            </ul>
+        </div>
+    </div>
+</div>
+<br  *ngIf="!showMenu">
+<app-bnav></app-bnav>
+
+<section class="pattern" *ngIf="showMenu">
+    <div class="geeks">
+        <p><span>Menu</span><img src="../../assets/close.svg" alt="close" (click)="showMenu = !showMenu"></p>
+        <ul class="ul_menu">
+            <li><a href="#" >Career</a></li>
+            <li><a href="#" >Contact Us</a></li>
+            <li><a href="#" >About Us</a></li>
+            <li><a href="#" >Terms & Conditions</a></li>
+            <li ><a href="#" (click)="logout()">Logout</a></li>
+        </ul>
+    </div>
+</section>
