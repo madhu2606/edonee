@@ -102,4 +102,31 @@ export class CourseService {
     })
   }
 
+  Addsubscription(data){
+    return this.http.post(environment.url.subscribe,data,this.requestOptions).map(res=>{
+      console.log(res)
+      return res
+    })
+  }
+
+
+  GetNews(){
+    return this.http.get(environment.url.news,this.requestOptions).map(res=>{
+      console.log(res)
+      return res
+      // if(res['success'] == true){
+      //   return res['data']
+      // }else{
+      //   // error: {message: "jwt expired"}
+      //   if(res['error']['message'] == "jwt expired"){
+      //     localStorage.removeItem('token')
+      //     this.router.navigate(['']);
+          
+      //   }else{
+      //     return {}
+      //   }
+      // }
+    })
+  }
+
 }

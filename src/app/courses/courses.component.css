@@ -104,7 +104,7 @@ ul.course_ul {
     padding-left: 0px;
 }
 ul.course_ul li {
-    display: inline-block;
+    display: inline-flex;
     width: 30%;
     margin: 0px 3px;
 }

@@ -37,7 +37,7 @@
         <p>Courses <img src="../../assets/book.svg" alt="Book"></p>
         <ul class="course_ul">
             <li  *ngFor="let i of allcourses" (click)='gotoCourse(i.course_id)'>
-                <div class="sub_course" style="background: url({{i.imageUrl}});">
+                <div class="sub_course" style="background: url({{i.mobImageUrl}});">
                     <p class="sub_course_head">{{i.subject}}</p>
                 </div>
             </li>

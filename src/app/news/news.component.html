@@ -6,18 +6,11 @@
 <div class="body">
     <div class="container" style="
     margin-bottom: 100%;">
-        <div class="single_news">
-            <h3>Welcome on Edonee</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum dolor tellus ornare cras elementum.<br><br>Dictum ultrices lorem commodo amet, diam porta cursus sem. Malesuada cursus leo, leo sit euismod gravida tempus.<br><br>Ut aliquam sit neque nulla vel sagittis, quam nisi. Pellentesque mi proin mattis ac donec odio. Sagittis nam nunc pulvinar potenti. Est amet lacinia ullamcorper consectetur.</p>
+        <div class="single_news" *ngFor="let i of newsList">
+            <h3>{{i.news_head}}</h3>
+            <p>{{i.news_description}}</p>
         </div>
-        <div class="single_news">
-            <h3>New Courses Added</h3>
-            <p>Dictum ultrices lorem commodo amet, diam porta cursus sem. Malesuada cursus leo, leo sit euismod gravida tempus.<br><br>Aiquam sit neque nulla vel sagittis, quam nisi. Pellentesque mi proin mattis ac donec odio. Sagittis nam nunc pulvinar potenti. Est amet lacinia ullamcorper consectetur. </p>
-        </div>
-        <div class="single_news">
-            <h3>Best Students</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Bibendum dolor tellus ornare cras elementum.<br><br>Aiquam sit neque nulla vel sagittis, quam nisi. Pellentesque mi proin mattis ac donec odio. Sagittis nam nunc pulvinar potenti. Est amet lacinia ullamcorper consectetur. </p>
-        </div>
+      
     </div>
     <br>
 </div>

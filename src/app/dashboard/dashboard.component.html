@@ -11,7 +11,7 @@
             <span *ngIf="lastCourse.length != 0" >
             
             <p *ngIf="!isbday">Continue where you left <img src="../../assets/book.svg" alt="Book"></p>
-            <div *ngIf="!isbday" (click)='gotoCourse(lastCourse[0].last_viewed.course_id)'  class="course_one1" style="background: url({{lastCourse[0].last_viewed.imageUrl}});  background-repeat: no-repeat; background-position-x: center;    background-position-y: bottom; border-radius: 8px;  background-color: #000000;">
+            <div *ngIf="!isbday" (click)='gotoCourse(lastCourse[0].last_viewed.course_id)'  class="course_one1" >
                 <p class="course_head">{{lastCourse[0].last_viewed.subject  }}</p>
             </div>
             </span>
@@ -27,7 +27,7 @@
         </div>
         <div  class="sec_four">
             <p *ngIf="isbday">Continue where you left <img src="../../assets/book.svg" alt="Book"></p>
-            <div *ngIf="isbday" class="course_one1" style="background: url({{lastCourse[0].last_viewed.imageUrl}});  background-repeat: no-repeat; background-position-x: center;    background-position-y: bottom; border-radius: 8px;  background-color: #000000;"> 
+            <div *ngIf="isbday" class="course_one1" > 
                  <p class="course_head">{{lastCourse[0].last_viewed.subject}}</p>
             </div>
         </div>
@@ -36,7 +36,7 @@
             <p *ngIf="RecomCourse != null ">Recommended Courses  <img src="../../assets/book.svg" alt="Book"></p>
             <ul class="course_ul" *ngIf="RecomCourse != null ">
                 <li  *ngFor="let i of RecomCourse" (click)='gotoCourse(i.course_id)'>
-                    <div class="sub_course" style="background: url({{i.imageUrl}});">
+                    <div class="sub_course" style="background: url({{i.mobImageUrl}});">
                         <p class="sub_course_head">{{i.subject}}</p>
                     </div>
                 </li>
@@ -54,10 +54,12 @@
             <p>Courses <img src="../../assets/book.svg" alt="Book"></p>
             <ul class="course_ul">
                 <li  *ngFor="let i of allcourses" (click)='gotoCourse(i.course_id)'>
-                    <div class="sub_course" style="background: url({{i.imageUrl}});">
+                    <div class="sub_course" style="background: url({{i.mobImageUrl}});">
                         <p class="sub_course_head">{{i.subject}}</p>
                     </div>
                 </li>
+              
+               
                
             </ul>
         </div>

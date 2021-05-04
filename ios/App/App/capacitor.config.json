@@ -1,1 +1,13 @@
-{}
+{
+  "appId": "com.edonee.app",
+  "appName": "Edonee",
+  "bundledWebRuntime": false,
+  "npmClient": "npm",
+  "webDir": "dist\\eduapp",
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 0
+    }
+  },
+  "cordova": {}
+}

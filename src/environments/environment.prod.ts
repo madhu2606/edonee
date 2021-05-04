@@ -7,6 +7,8 @@ export const environment = {
     "profile":"http://api.edonee.com:3051/v1.0/profile/update",
     "recomendedcourses":"http://api.edonee.com:3051/v1.0/usage/getRecommendedCourses",
     "lastcourse":"http://api.edonee.com:3051/v1.0/usage/getUsage",
-    "updatelastCourse":"http://api.edonee.com:3051/v1.0/usage/update"
+    "updatelastCourse":"http://api.edonee.com:3051/v1.0/usage/update",
+    "news":"http://api.edonee.com:3051/v1.0/profile/get-news",
+    "subscribe":"http://api.edonee.com:3051/v1.0/profile/add-subscription-user"
   }
 };

@@ -6,26 +6,38 @@
 
 
 <div class="body">
-    <div class="container" style="
+    <div class="container" *ngIf="!tosubscribe" style="
     margin-bottom: 100%;">
     <p class="danger-info">{{registermsg}}</p>
        	<div class="video_part">
 			<video width="100%" height="250" src="{{videoURL}}" type="video/mp4" controls controlsList="nodownload">
-				<!-- <source src="{{videoURL}}" type="video/mp4"> -->
-				<!-- <source src="http://api.edonee.com:3051/v1.0/courses/cs_flutter/cs_flutter_v_01?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7Il9pZCI6IjYwODY5ODU0YTE1MmE4NmE2ODYxODY5MiIsImFjdGl2ZSI6MSwiYWdlIjoiMjYiLCJjb3VudHJ5IjoiSW5kaWEiLCJlbWFpbElkIjoibWFkaHVAZ21haWwuY29tIiwiZ2VuZGVyIjoibWFsZSIsImhhc2hLZXkiOiJhZG1pbkAxMjMiLCJtb2JpbGVOdW1iZXIiOiI5OTg5MTUyMDM5IiwidXNlck5hbWUiOiJNYWRodSIsInJvbGUiOiJ1c2VyIiwicmVmZXJfZWFybiI6Ik1hZGh1NjIzNCIsImNvbGxlZ2UiOiJnbml0IiwiY291cnNlIjoiY3NlIiwiZG9iIjoiMjAyMS0wNC0wOCIsInN0YXRlIjoidGVsYW5nYW5hIiwic3RyZWV0IjoidXBwYWwiLCJzdWJzY3JpcHRpb25zIjpbeyJzdWJzY3JpcHRpb25JZCI6ImRldl9jb2RpbmdfMDIiLCJzdWJzY3JpcHRpb25OYW1lIjoiRGV2ZWxvcGluZyBBcHBzIiwic3Vic2NyaXB0aW9uUHJpY2UiOjMwMCwiYWN0aXZlIjoxLCJzdWJzY3JpcHRpb25WYWxpZGl0eSI6IjMwIERheXMiLCJzdWJzY3JpcHRpb25WYWxpZGl0eUxpbWl0IjozMCwic3Vic2NyaXB0aW9uRGVzY3JpcHRpb24iOiJMZWFybmluZyBidWlsZGluZyBzb2Z0d2FyZSBhcHBzIHVzaW5nIGZsdXR0ZXIiLCJzdWJzY3JpcHRpb25SZWNvbW1lbmRlZCI6dHJ1ZSwiY291cnNlX2lkIjoiY3NfZmx1dHRlciIsInN1YnNjcmlwdGlvblN0YXJ0RGF0ZSI6IjIwMjEtMDQtMjZUMTQ6MDc6MjcuMTE4WiJ9XX0sImlhdCI6MTYxOTY5OTM2MiwiZXhwIjo0ODI3NTY5OTM2Mn0.KCtdf7TApih2wqWyqPx3W7foaWx__Hz7qP8FoaB68h4" type="video/mp4"> -->
+			
 					Your browser does not support the video tag.
 			</video>
 		</div>
         <div class="videos_list">
 			<ul class="course_list">
-				<li class="active_play" *ngFor="let i of coursevideos.CourseList" (click)='getVideo(i.videoURL)'>
-					<input type="checkbox" value="" disabled (click)='getVideo(i.videoURL)'><span>{{i.videoTitle}}</span>
+				<li  [ngClass]="{active_play: isEnabled(i.videoURL)}" *ngFor="let i of coursevideos.CourseList" (click)='getVideo(i.videoURL);isEnabled(i.videoURL)'>
+					<input [checked] = "isEnabled(i.videoURL)" type="checkbox" value=""  (click)='getVideo(i.videoURL);isEnabled(i.videoURL)'><span>{{i.videoTitle}}</span>
 					<p><i class="fa fa-play-circle" (click)='getVideo(i.videoURL)'></i> {{i.videoLength}}</p>
 				</li>
 				
 			</ul>
 		</div>
        
+       
+    </div>
+	<div class="container" *ngIf="tosubscribe" style=" margin-bottom: 100%;">
+		<div class="sub_course" style="background: url({{coursevideos.imageUrl}});">
+			<!-- <p class="sub_course_head">{{coursevideos.subject}}</p> -->
+		</div>
+		<div class="sub_details"><h4>{{coursevideos.subject}}</h4><p class="course_tutor">{{coursevideos.tutor}}</p><p class="course_desc">{{coursevideos.shortDescription}}</p>
+			<div class="text-center">
+
+				<button (click)="subscr(coursevideos.course_id)" class="btn subs" >Subscribe</button>
+			</div>
+			</div>
+		
        
     </div>
     <br>

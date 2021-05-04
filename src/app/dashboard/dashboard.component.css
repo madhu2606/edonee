@@ -21,7 +21,7 @@
     border-radius: 8px;
 }
 .course_one1 {
-    /* background: url(../../assets/course1.svg); */
+    background: url(../../assets/course1.svg);
     background-repeat: no-repeat;
     background-position-x: center;
     background-position-y: bottom;
@@ -96,7 +96,9 @@ ul.course_ul {
     padding-left: 0px;
 }
 ul.course_ul li {
-    display: inline-block;
+    /* display: inline-block; */
+    display: inline-flex;
+    
     width: 30%;
     margin: 0px 3px;
 }
