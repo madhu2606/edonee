@@ -10,7 +10,7 @@
             </div>
             <span *ngIf="lastCourse.length != 0" >
             
-            <p *ngIf="!isbday">Continue where you left <img src="../../assets/book.svg" alt="Book"></p>
+            <p *ngIf="!isbday"><span class="fw-600">Continue where you left</span> <img src="../../assets/book.svg" alt="Book"></p>
             <div *ngIf="!isbday" (click)='gotoCourse(lastCourse[0].last_viewed.course_id)'  class="course_one1" >
                 <p class="course_head">{{lastCourse[0].last_viewed.subject  }}</p>
             </div>
@@ -19,21 +19,21 @@
             <span *ngIf="lastCourse.length == 0"> 
             <p *ngIf="!isbday">&nbsp;</p>
             <div *ngIf="!isbday" class="course_one1">
-                <p class="course_head">Start a new Course</p>
+                <p class="course_head"><span class="fw-600">Start a new Course</span></p>
             </div>
 
             </span>
            
         </div>
         <div  class="sec_four">
-            <p *ngIf="isbday">Continue where you left <img src="../../assets/book.svg" alt="Book"></p>
+            <p *ngIf="isbday"><span class="fw-600">Continue where you left</span> <img src="../../assets/book.svg" alt="Book"></p>
             <div *ngIf="isbday" class="course_one1" > 
                  <p class="course_head">{{lastCourse[0].last_viewed.subject}}</p>
             </div>
         </div>
         
         <div class="sec_two" *ngIf="RecomCourse != null " >
-            <p *ngIf="RecomCourse != null ">Recommended Courses  <img src="../../assets/book.svg" alt="Book"></p>
+            <p *ngIf="RecomCourse != null "><span class="fw-600">Recommended Courses</span>  <img src="../../assets/book.svg" alt="Book"></p>
             <ul class="course_ul" *ngIf="RecomCourse != null ">
                 <li  *ngFor="let i of RecomCourse" (click)='gotoCourse(i.course_id)'>
                     <div class="sub_course" style="background: url({{i.mobImageUrl}});">
@@ -51,7 +51,7 @@
             </div>
         </div>
         <div class="sec_three">
-            <p>Courses <img src="../../assets/book.svg" alt="Book"></p>
+            <p><span class="fw-600">Courses </span><img src="../../assets/book.svg" alt="Book"></p>
             <ul class="course_ul">
                 <li  *ngFor="let i of allcourses" (click)='gotoCourse(i.course_id)'>
                     <div class="sub_course" style="background: url({{i.mobImageUrl}});">

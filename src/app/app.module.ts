@@ -21,6 +21,7 @@ import { CoursesComponent } from './courses/courses.component';
 import { CoursepageComponent } from './coursepage/coursepage.component';
 import { SplashComponent } from './splash/splash.component';
 import { DatePipe } from '@angular/common';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 @NgModule({ 
@@ -35,6 +36,7 @@ import { DatePipe } from '@angular/common';
     CoursesComponent,
     CoursepageComponent,
     SplashComponent,
+    ForgotpasswordComponent,
 
   ],
   imports: [

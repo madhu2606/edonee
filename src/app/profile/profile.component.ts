@@ -74,9 +74,21 @@ export class ProfileComponent implements OnInit {
 
       }
   }
+  this.userdetails.data["gender"] =t.gender,
+  this.userdetails.data["age"]=t.age,
+  this.userdetails.data["college"]=t.college,
+  this.userdetails.data["course"]=t.course,
+  this.userdetails.data["dob"]=t.dob,
+  this.userdetails.data["street"]=t.street,
+  this.userdetails.data["state"]=t.state,
+  this.userdetails.data["refer_earn"]= t.refcode
+
+
   console.log(temp)
   this.login.UpdateProfile(temp).subscribe(res=>{
     console.log(res);
+    // localStorage.setItem('token',this.userdetails)
+    // console.log(localStorage.getItem)
   })
   
   }

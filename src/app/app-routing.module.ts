@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { CoursepageComponent } from './coursepage/coursepage.component';
 import { CoursesComponent } from './courses/courses.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 import { LoginComponent } from './login/login.component';
 import { NewsComponent } from './news/news.component';
 import { ProfileComponent } from './profile/profile.component';
@@ -45,6 +46,10 @@ const routes: Routes = [
   {
     path:'coursepage',
     component:CoursepageComponent
+  },
+  {
+    path:'forgotpass',
+    component:ForgotpasswordComponent
   },
 ];
 

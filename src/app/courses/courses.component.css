@@ -1,10 +1,12 @@
 .header {
-    height: 40px;
+    height: 70px;
     padding-top: 40px;
+    box-shadow: 0px 0px 16px rgb(0 147 233 / 12%);
+
 }
-.body {
+/* .body {
     background: #E5E5E5;
-}
+} */
 p.header_head {
     margin-bottom: 0px;
     text-align: center;
@@ -18,9 +20,9 @@ i.cust_arrow {
     font-size: 15px;
     cursor: pointer;
 }
-.body {
+/* .body {
     background: #E5E5E5;
-}
+} */
 .course_one {
     background: url(../../assets/birthday.svg);
     background-repeat: no-repeat;
@@ -106,7 +108,7 @@ ul.course_ul {
 ul.course_ul li {
     display: inline-flex;
     width: 30%;
-    margin: 0px 3px;
+    margin: 0px 5px;
 }
 p.sub_course_head {
     font-size: 16px;

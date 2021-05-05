@@ -100,7 +100,7 @@ ul.course_ul li {
     display: inline-flex;
     
     width: 30%;
-    margin: 0px 3px;
+    margin: 0px 5px;
 }
 p.sub_course_head {
     font-size: 16px;
@@ -222,3 +222,31 @@ ul.ul_menu li a {
     color: #ffffff;
     font-size: 16px;
 }
+.fw-600{
+    font-weight: 700;
+}
+
+@media only screen and (min-width:450px)  {
+    .sec_one{
+        top: 8.53%;
+    }
+    p.sub_course_head {
+      
+        padding: 116px 17px 13px 15px;
+    }
+    .course_head {
+        padding: 118px 25px 24px 64px;
+    }
+} 
+@media (orientation: landscape) {
+    .sec_one{
+        top: 21.53%;
+    }
+    p.sub_course_head {
+      
+        padding: 116px 17px 13px 15px;
+    }
+    .course_head {
+        padding: 118px 25px 24px 64px;
+    }
+  }
