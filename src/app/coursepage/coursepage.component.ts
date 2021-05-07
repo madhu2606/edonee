@@ -116,7 +116,13 @@ export class CoursepageComponent implements OnInit {
 
     this.course.Addsubscription(temp).subscribe((res) => {
       console.log(res);
-      this.userdetails.data.subscriptions.push(temp)
+      if(this.userdetails.data.hasOwnProperty('subscriptions')){
+
+        this.userdetails.data.subscriptions.push(temp)
+      }else{
+        this.userdetails.data.subscriptions = []
+        this.userdetails.data.subscriptions.push(temp)
+      }
       this.getVideo(this.coursevideos.CourseList[0].videoURL);
       this.isEnabled(this.coursevideos.CourseList[0].videoURL);
     });

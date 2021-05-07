@@ -66,6 +66,17 @@ export class LoginService {
 
   }
 
+  isLoggedIn(){
+    let helper = new JwtHelperService();
+    let token = localStorage.getItem('token');
+    let decoded= helper.decodeToken(token);
+    if(helper.isTokenExpired(token)){
+      return false
+    }else{
+      return true
+    }
+  }
+
   UpdateProfile(data){
     return this.http.post(environment.url.profile,data,this.requestOptions).map(
       res=>{
@@ -73,6 +84,36 @@ export class LoginService {
       return res
       
     });
+  }
+
+  checkuser(data){
+    return this.http.post(environment.url.checkuser,data,{observe: 'response'}).map(
+      res=>{
+      console.log(res)
+      return res.body
+      
+    });
+
+  }
+  updatePass(data,id){
+    let headerDict = {
+     
+      'x_id':id
+     
+      
+  
+    }
+    
+    let  requestOptions = {                                                                                                                                                                                 
+      headers: new HttpHeaders(headerDict), 
+    };
+    return this.http.post(environment.url.updatePass,data,requestOptions).map(
+      res=>{
+      console.log(res)
+      return res
+      
+    });
+
   }
 
 }

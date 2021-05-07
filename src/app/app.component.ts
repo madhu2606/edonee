@@ -7,5 +7,5 @@ import { Plugins } from '@capacitor/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'edonee';
+  title = 'Edonee';
 }

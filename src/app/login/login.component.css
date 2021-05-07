@@ -96,3 +96,9 @@ ul.border_set li {
     padding-left: 6px;
     cursor: pointer;
 }
+
+@media only screen and (min-width:450px)  {
+    .social_icons {
+        width: 300px;
+    }
+} 
