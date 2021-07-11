@@ -1,0 +1,71 @@
+<div class="header">
+    <div class="container">
+        <p class="header_head"><i class="fa fa-chevron-left cust_arrow" (click)="back()"></i>Forum</p>
+    </div>
+</div>
+<div class="body">
+    <div class="container" style="
+    margin-bottom: 100%;">
+        <div class="row details_box pt-2">
+            <div class="col-sm-12">
+                <div class="div_post">
+                    <button id="add_post" data-toggle="modal" data-target="#createModal">CREATE POST</button>
+                </div>
+                <div class="all_forums">
+                    <div class="forum" *ngFor="let i of allForums">
+                        <div class="profile"><img src="../../assets/profile.jpg" alt="profile" class="profile_page">
+                        </div>
+                        <div class="user_details">
+                            <h3>{{i.name}}</h3>
+                            <p>{{i.created_date |date :"medium"}}</p>
+                        </div>
+                        <p class="question">{{i.question}}</p>
+                        <p class="reply" (click)="reply(i.request_id)">Reply</p>
+                        <hr>
+                        <div class="reply_box" style="display:none;" id="{{i.request_id}}">
+                            <h3>Reply to {{i.name}} <span class="cancel_reply" data_request_id="ftrCPOJQfwCy" (click)="cancelreply(i.request_id)">Cancel
+                                    Reply</span></h3><textarea [(ngModel)]="replytext" class="form-control" rows="5"
+                                id="reply_answer_ftrCPOJQfwCy" placeholder="Type here.."></textarea><button class="post"
+                                data_request_id="ftrCPOJQfwCy" (click)="postReply(i.request_id)">POST Comment &gt;&gt;</button>
+                        </div>
+                        <div class="all_answers" *ngFor="let j of i.reply">
+                            <div class="answers">
+                                <div class="profile"><img src="../../assets/profile.jpg" alt="profile"
+                                        class="profile_page"></div>
+                                <div class="user_details">
+                                    <h3>{{j.name}}</h3>
+                                    <p>{{j.created_date |date :"medium"}}</p>
+                                </div>
+                                <p class="question">{{j.answer}}</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <br>
+</div>
+
+<div id="createModal" #myModal class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Create New Post</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <textarea class="form-control" [(ngModel)]="newPost" rows="5" id="question" placeholder="Enter your query.."></textarea>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" (click)="createPost()" id="create">Create</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<app-bnav></app-bnav>

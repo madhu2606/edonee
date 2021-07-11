@@ -1,16 +1,22 @@
 export const environment = {
   production: true,
   url:{
-    "login":"http://api.edonee.com:3051/v1.0/profile/login",
-    "register":"http://api.edonee.com:3051/v1.0/profile/signup",
-    "allcourses":"http://api.edonee.com:3051/v1.0/courses",
-    "profile":"http://api.edonee.com:3051/v1.0/profile/update",
-    "recomendedcourses":"http://api.edonee.com:3051/v1.0/usage/getRecommendedCourses",
-    "lastcourse":"http://api.edonee.com:3051/v1.0/usage/getUsage",
-    "updatelastCourse":"http://api.edonee.com:3051/v1.0/usage/update",
-    "news":"http://api.edonee.com:3051/v1.0/profile/get-news",
-    "subscribe":"http://api.edonee.com:3051/v1.0/profile/add-subscription-user",
-    "checkuser":"http://api.edonee.com:3051/v1.0/profile/checkUser",
-    "updatePass":"http://api.edonee.com:3051/v1.0/profile/forgotPassword"
+    "login":"https://api.edonee.com:3051/v1.0/profile/login",
+    "register":"https://api.edonee.com:3051/v1.0/profile/signup",
+    "allcourses":"https://api.edonee.com:3051/v1.0/courses",
+    "profile":"https://api.edonee.com:3051/v1.0/profile/update",
+    "recomendedcourses":"https://api.edonee.com:3051/v1.0/usage/getRecommendedCourses",
+    "lastcourse":"https://api.edonee.com:3051/v1.0/usage/getUsage",
+    "updatelastCourse":"https://api.edonee.com:3051/v1.0/usage/update",
+    "news":"https://api.edonee.com:3051/v1.0/profile/get-news",
+    "subscribe":"https://api.edonee.com:3051/v1.0/profile/add-subscription-user",
+    "checkuser":"https://api.edonee.com:3051/v1.0/profile/checkUser",
+    "updatePass":"https://api.edonee.com:3051/v1.0/profile/forgotPassword",
+    "allforums":"https://api.edonee.com:3051/v1.0/forum/all-forums",
+    "newPost":"https://api.edonee.com:3051/v1.0/forum/create-post",
+    "replyPost":"https://api.edonee.com:3051/v1.0/forum/reply-post",
+    "admissions":"https://api.edonee.com:3051/v1.0/admissions/save",
+    "contactUs":"https://api.edonee.com:3051/v1.0/admin/contact-data",
+    "gsign":"https://api.edonee.com:3051/v1.0/profile/token-by-email"
   }
 };

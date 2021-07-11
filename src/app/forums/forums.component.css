@@ -1,0 +1,147 @@
+.header {
+    height: 70px;
+    padding-top: 30px;
+    box-shadow: 0px 0px 16px rgb(0 147 233 / 12%);
+
+}
+p.header_head {
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 600;
+}
+i.cust_arrow {
+    color: #0093E9;
+    float: left;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.single_news h3 {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 600;
+    margin-top: 40px;
+}
+.single_news p {
+    font-size: 15px;
+    line-height: 24px;
+    margin-bottom: 0px;
+}
+.full_footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding: 10px 0px;
+    background: #ffffff;
+}
+.footer {
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgb(0 147 233 / 12%);
+    border-radius: 10px;
+    padding: 20px 10px;
+    width: 90%;
+    margin: 0px auto;
+}
+.footer_sec {
+    display: inline-block;
+    text-align: center;
+    width: 24%;
+}
+.footer_sec span {
+    font-size: 13px;
+    line-height: 24px;
+    font-weight: 600;
+}
+button#save {
+    margin-top: 10px;
+    float: right;
+}
+p.model_head {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 24px;
+    margin-top: 15px;
+}
+img.profile_page {
+    border-radius: 30px;
+}
+.user_details {
+    width: 78%;
+    display: inline-block;
+    margin-left: 2%;
+}
+.profile {
+    width: 10%;
+    display: inline-block;
+    vertical-align: top;
+}
+.user_details h3 {
+    margin: 0px 0px;
+    color: #0093E9;
+    font-weight: 600;
+    font-size: 17px;
+}
+.user_details p {
+    margin-bottom: 20px;
+    color: #0093E9;
+    font-size: 13px;
+}
+p.question {
+    font-size: 14px;
+}
+p.reply {
+    text-align: right;
+    font-size: 18px;
+    color: #0093E9;
+    cursor: pointer;
+}
+.all_answers {
+    width: 90%;
+    margin-left: auto;
+    margin-bottom: 40px;
+}
+.reply_box {
+    width: 100%;
+    margin-left: auto;
+    margin-bottom: 25px;
+}
+span.cancel_reply {
+    color: #0093E9;
+    cursor: pointer;
+    font-size: 14px;
+    margin-left: 20px;
+}
+#add_post {
+    padding: 10px 16px;
+    border: none;
+    background: #0093E9;
+    color: #ffffff;
+    width: 100%;
+    border-radius: 10px;
+}
+button.post {
+    margin: 20px 0px 0px 0px;
+    padding: 6px 16px;
+    border: none;
+    background: #0093E9;
+    color: #ffffff;
+}
+.div_post {
+    margin-top: 20px;
+    margin-bottom: 26px;
+}
+h4.modal-title {
+    font-size: 24px;
+}
+button#create {
+    background: #0093E9;
+    color: #ffffff;
+}
+img.profile_page {
+    width: 100%;
+}
+.answers {
+    margin-bottom: 25px;
+}

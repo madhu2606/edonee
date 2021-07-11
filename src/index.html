@@ -6,10 +6,38 @@
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="89436250286-djg5vgskg02c1gob42t6mgtk251iat0p.apps.googleusercontent.com">
+   
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  
 </head>
 <body class="mat-typography">
   <app-root></app-root>
+  <!-- <div class="social_icons" >
+    <img src="../../assets/google.svg" data-onsuccess="onSignIn" class="g-signin2" alt="Google Logo"> Sign up with Google
+</div> -->
+
+<!-- <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    <script>
+      function onSignIn(googleUser) {
+        console.log('in')
+        // Useful data for your client-side scripts:
+        var profile = googleUser.getBasicProfile();
+        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+        console.log('Full Name: ' + profile.getName());
+        console.log('Given Name: ' + profile.getGivenName());
+        console.log('Family Name: ' + profile.getFamilyName());
+        console.log("Image URL: " + profile.getImageUrl());
+        console.log("Email: " + profile.getEmail());
+
+        // The ID token you need to pass to your backend:
+        var id_token = googleUser.getAuthResponse().id_token;
+        console.log("ID Token: " + id_token);
+      }
+    </script> -->
+ 
 </body>
 </html>

@@ -1,28 +1,37 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, NgZone, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
 
+
 import 'rxjs/add/operator/map';
+declare const gapi: any;
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
-export class LoginComponent  {
+export class LoginComponent implements AfterViewInit {
   isvalid = false
+  
+  public auth2: any;
   constructor(
     private login:LoginService,
     private route: ActivatedRoute, 
-    private router: Router
+    private router: Router,
+    private zone: NgZone
   ) { }
 
- 
+  ngAfterViewInit() {
+    
+  }
+
   loginForm = new FormGroup({
     username: new FormControl('',Validators.required),
     password: new FormControl('',Validators.required)
   });
+
 
   Login(){
     
@@ -46,4 +55,6 @@ export class LoginComponent  {
     }
      );
   }
+ 
+
 }

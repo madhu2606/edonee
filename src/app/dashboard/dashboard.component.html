@@ -12,7 +12,7 @@
             
             <p *ngIf="!isbday"><span class="fw-600">Continue where you left</span> <img src="../../assets/book.svg" alt="Book"></p>
             <div *ngIf="!isbday" (click)='gotoCourse(lastCourse[0].last_viewed.course_id)'  class="course_one1" >
-                <p class="course_head">{{lastCourse[0].last_viewed.subject  }}</p>
+                <p class="course_head" style="font-weight: 700;">{{lastCourse[0].last_viewed.subject  }}</p>
             </div>
             </span>
 
@@ -47,7 +47,7 @@
             <p><img src="../../assets/refer.svg"> Refer and Earn</p>
             <img src="../../assets/share.svg" alt="Share" (click)='share()' class="share_icon">
             <div class="refer">
-                <input type="text"  readonly id="earn_refer" value="edonee.com/refer/{{userdetails.data.refer_earn}}">
+                <input type="text"  readonly id="earn_refer" value="https://edonee.com/credits?code={{userdetails.data.refer_earn}}">
             </div>
         </div>
         <div class="sec_three">
@@ -72,9 +72,13 @@
     <div class="geeks">
         <p><span>Menu</span><img src="../../assets/close.svg" alt="close" (click)="showMenu = !showMenu"></p>
         <ul class="ul_menu">
-            <li><a href="#" >Career</a></li>
-            <li><a href="#" >Contact Us</a></li>
-            <li><a href="#" >About Us</a></li>
+            <!-- <li><a href="#" [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Career</a></li> -->
+            <li><a href="#"  [routerLink]="['/admissions']" routerLinkActive="router-link-active" >Admissions</a></li>
+            <li><a href="#"  [routerLink]="['/forum']" routerLinkActive="router-link-active" >Forum</a></li>
+            <li><a href="#"  [routerLink]="['/feedback']" routerLinkActive="router-link-active" >Feedback</a></li>
+            <li><a href="#"  [routerLink]="['/pass']" routerLinkActive="router-link-active" >Pass</a></li>
+            <li><a href="#"  [routerLink]="['/contactus']" routerLinkActive="router-link-active" >Contact Us</a></li>
+            <li><a href="#" [routerLink]="['/aboutus']" routerLinkActive="router-link-active"  >About Us</a></li>
             <li><a href="#" >Terms & Conditions</a></li>
             <li ><a href="#" (click)="logout()">Logout</a></li>
         </ul>

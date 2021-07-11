@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import { CourseService } from '../services/course.service';
@@ -36,6 +36,29 @@ export class CoursepageComponent implements OnInit {
         this.getCourseVideos(this.courseid);
       });
   }
+
+  uplst(){
+    let lstVid = {
+      emailId: this.userdetails.emailId,
+      last_viewed: {
+        course_id: this.coursevideos.course_id,
+        subject: this.coursevideos.subject,
+        shortDescription: this.coursevideos.shortDescription,
+        tutor: this.coursevideos.tutor,
+        imageUrl: this.coursevideos.imageUrl,
+        video_tile: this.coursevideos.video_tile,
+        type: this.coursevideos.type,
+      },
+      recommended_courses: [this.coursevideos.course_id],
+    };
+    // this.location.back();
+    console.log(lstVid);
+    this.course.UpdateLastCourse(lstVid).subscribe((res) => {
+      console.log(res);
+    
+    });
+
+  }
   back() {
     // <-- go back to previous location on cancel
     let lstVid = {
@@ -58,6 +81,8 @@ export class CoursepageComponent implements OnInit {
       this.location.back();
     });
   }
+
+
   getCourseVideos(id) {
     this.course.GetCourseIndiv(id).subscribe((res) => {
       console.log(res);
@@ -94,6 +119,7 @@ export class CoursepageComponent implements OnInit {
       this.registermsg = 'Please subscribe for the course';
       this.tosubscribe = true;
     }
+    this.uplst()
   }
 
   isEnabled(id) {

@@ -22,6 +22,12 @@ import { CoursepageComponent } from './coursepage/coursepage.component';
 import { SplashComponent } from './splash/splash.component';
 import { DatePipe } from '@angular/common';
 import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { AdmissionsComponent } from './admissions/admissions.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { PassComponent } from './pass/pass.component';
+import { ForumsComponent } from './forums/forums.component';
 
 
 @NgModule({ 
@@ -37,6 +43,12 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
     CoursepageComponent,
     SplashComponent,
     ForgotpasswordComponent,
+    AboutUsComponent,
+    ContactUsComponent,
+    AdmissionsComponent,
+    FeedbackComponent,
+    PassComponent,
+    ForumsComponent,
 
   ],
   imports: [

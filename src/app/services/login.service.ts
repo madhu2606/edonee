@@ -56,6 +56,24 @@ export class LoginService {
     });
   }
 
+  googlesign(data){
+    return this.http.post(environment.url.gsign,data,{observe: 'response'}).map(
+      res=>{
+      // console.log(res)
+      if(res.body['success'] == true){
+        localStorage.setItem("token",res.body["token"]);
+        
+        return {'status':200,'error':'','sucess':'true','token':res.body["token"]}
+      }
+      else{
+        let err = res.body["error"]["message"]
+        return {'status':400,'error':err,'sucess':'false'}
+
+      }
+      
+    });
+
+  }
   getUserDetails(){
     let helper = new JwtHelperService();
     let token = localStorage.getItem('token');

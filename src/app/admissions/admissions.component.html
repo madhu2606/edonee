@@ -1,0 +1,104 @@
+<div class="header">
+    <div class="container">
+        <p class="header_head">
+            <i class="fa fa-chevron-left cust_arrow" (click)="back()"></i>Admissions
+            Form
+        </p>
+    </div>
+</div>
+<div class="body">
+    <div class="container" style="margin-bottom: 100%">
+        <div class="row details_box pt-2">
+            <form class="w-100" [formGroup]="admissionform" (ngSubmit)="Addadmision()">
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="usr">Full Name*</label>
+                        <input type="text" formControlName="name" class="form-control" id="full_name" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="usr">Father's Name</label>
+                        <input type="text" formControlName="father_name" class="form-control" id="fname" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="usr">Mother's Name</label>
+                        <input type="text" formControlName="mother_name" class="form-control" id="mname" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="dob">Birth Date*</label>
+                        <input type="date" formControlName="dob" class="form-control" id="dob" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="usr">Email ID*</label>
+                        <input type="text" formControlName="email_id" class="form-control" id="email" />
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <label for="usr">Graduation Type*</label><br />
+                    <div class="form-group">
+                        <label class="radio-inline">
+                            <input type="radio" formControlName="graduation" class="graduation"
+                                checked="" value="UG" />&nbsp;UG</label>
+                        &nbsp; &nbsp;
+                        <label class="radio-inline">
+                            <input type="radio" formControlName="graduation" class="graduation"
+                                value="PG" />&nbsp;PG</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="usr">Mobile Number*</label>
+                        <input type="text" formControlName="mobile" class="form-control" id="mobile" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="usr">Preferred Colleges</label>
+                        <input type="text" formControlName="preferred_colleges" class="form-control" id="pcol" />
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <label for="usr">Gender*</label><br />
+                    <div class="form-group">
+                        <label class="radio-inline"><input type="radio" formControlName="gender" 
+                                class="gender" checked="" value="M" />&nbsp;Male</label>
+                        &nbsp;&nbsp;
+                        <label class="radio-inline"><input type="radio" formControlName="gender" 
+                                class="gender" value="F" />&nbsp;Female</label>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="usr">Course Choice</label>
+                        <input type="text" formControlName="course_preferred" class="form-control" id="course_choice" />
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                        <label for="usr">Parent Occupation</label>
+                        <input type="text" formControlName="occupation" class="form-control" id="pocc" />
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <div class="form-group">
+                        <label for="comment">Current Address</label>
+                        <textarea class="form-control" formControlName="address" rows="5" id="address"></textarea>
+                    </div>
+                </div>
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-primary" id="save">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <br />
+</div>
+
+<app-bnav></app-bnav>
