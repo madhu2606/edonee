@@ -27,6 +27,7 @@
     background-position-y: bottom;
     border-radius: 8px;
     background-color: #000000;
+    
 }
 .course_head {
     padding: 118px 25px 24px 25px;
@@ -48,7 +49,7 @@ p.course_head span {
     font-size: 24px;
     font-weight: 600;
 }
-.sec_one {
+/* .sec_one {
     padding: 5px 15px 0px 15px;
     background: #FFFFFF;
     box-shadow: 0px 0px 16px rgb(0 147 233 / 12%);
@@ -59,6 +60,26 @@ p.course_head span {
     bottom: 71.1%;
     border-radius: 8px;
     height: 210px;
+} */
+.sec_one {
+    padding: 10px 15px 10px 15px;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 16px rgb(0 147 233 / 12%);
+    position: absolute;
+    left: 4.35%;
+    right: 4.35%;
+    top: 13.53%;
+    bottom: 71.1%;
+    border-radius: 8px;
+    height: 156px;
+}
+.sec_two {
+    margin-top: 125px;
+    font-size: 15px;
+    font-weight: 600;
+}
+.sec_two p {
+    margin-top: 10px;
 }
 .sec_two {
     font-size: 15px;
@@ -70,7 +91,7 @@ p.course_head span {
     margin-bottom: 110px;
 }
 .sec_four {
-    margin-top: 180px;
+    /* margin-top: 180px; */
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 20px;
@@ -88,9 +109,9 @@ p.sub_course_head {
     color: #ffffff;
     padding: 116px 17px 13px 5px;
 }
-.sec_two p, .sec_three p {
+/* .sec_two p, .sec_three p {
     margin-bottom: 0px;
-}
+} */
 ul.course_ul {
     list-style: none;
     padding-left: 0px;
@@ -241,6 +262,12 @@ ul.ul_menu li a {
 @media (orientation: landscape) {
     .sec_one{
         top: 21.53%;
+    }
+    .sec_two{
+        margin-top: 50px;
+    }
+    .carousel-item>img{
+height: 135px;
     }
     p.sub_course_head {
       

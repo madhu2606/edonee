@@ -5,6 +5,22 @@
 <div class="body" *ngIf="!showMenu">
     <div class="container">
         <div class="sec_one">
+            <div class="course_one_slider">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                   
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="../../assets/29493.jpg" class="w-100" alt="Banner2">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="../../assets/2432.jpg" class="w-100" alt="Banner3">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+            <div class="sec_two">
+
             <div class="course_one" *ngIf="isbday">
                 <p class="course_head">Have a great day<br><span>{{userdetails.data.userName }}</span></p>
             </div>
@@ -25,15 +41,17 @@
             </span>
            
         </div>
-        <div  class="sec_four">
-            <p *ngIf="isbday"><span class="fw-600">Continue where you left</span> <img src="../../assets/book.svg" alt="Book"></p>
-            <div *ngIf="isbday" class="course_one1" > 
+        <div  class="sec_four" *ngIf="isbday">
+            <p ><span class="fw-600">Continue where you left</span> <img src="../../assets/book.svg" alt="Book"></p>
+            <div class="course_one1" > 
                  <p class="course_head">{{lastCourse[0].last_viewed.subject}}</p>
             </div>
+
+            
         </div>
         
-        <div class="sec_two" *ngIf="RecomCourse != null " >
-            <p *ngIf="RecomCourse != null "><span class="fw-600">Recommended Courses</span>  <img src="../../assets/book.svg" alt="Book"></p>
+        <div class="sec_five pt-3" *ngIf="RecomCourse != null " >
+            <p *ngIf="RecomCourse != null "><span class="fw-600">Recommended Courses </span>  <img src="../../assets/book.svg" alt="Book"></p>
             <ul class="course_ul" *ngIf="RecomCourse != null ">
                 <li  *ngFor="let i of RecomCourse" (click)='gotoCourse(i.course_id)'>
                     <div class="sub_course" style="background: url({{i.mobImageUrl}});">
@@ -73,13 +91,13 @@
         <p><span>Menu</span><img src="../../assets/close.svg" alt="close" (click)="showMenu = !showMenu"></p>
         <ul class="ul_menu">
             <!-- <li><a href="#" [routerLink]="['/routePath']" routerLinkActive="router-link-active" >Career</a></li> -->
-            <li><a href="#"  [routerLink]="['/admissions']" routerLinkActive="router-link-active" >Admissions</a></li>
+            <li><a href="#"  [routerLink]="['/profile']" routerLinkActive="router-link-active" >Profile</a></li>
             <li><a href="#"  [routerLink]="['/forum']" routerLinkActive="router-link-active" >Forum</a></li>
             <li><a href="#"  [routerLink]="['/feedback']" routerLinkActive="router-link-active" >Feedback</a></li>
             <li><a href="#"  [routerLink]="['/pass']" routerLinkActive="router-link-active" >Pass</a></li>
             <li><a href="#"  [routerLink]="['/contactus']" routerLinkActive="router-link-active" >Contact Us</a></li>
             <li><a href="#" [routerLink]="['/aboutus']" routerLinkActive="router-link-active"  >About Us</a></li>
-            <li><a href="#" >Terms & Conditions</a></li>
+            <li><a href="#" [routerLink]="['/terms']" routerLinkActive="router-link-active"  >Terms & Conditions</a></li>
             <li ><a href="#" (click)="logout()">Logout</a></li>
         </ul>
     </div>

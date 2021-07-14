@@ -28,6 +28,7 @@ import { AdmissionsComponent } from './admissions/admissions.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { PassComponent } from './pass/pass.component';
 import { ForumsComponent } from './forums/forums.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 @NgModule({ 
@@ -49,6 +50,7 @@ import { ForumsComponent } from './forums/forums.component';
     FeedbackComponent,
     PassComponent,
     ForumsComponent,
+    TermsComponent,
 
   ],
   imports: [

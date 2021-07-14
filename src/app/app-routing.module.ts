@@ -16,6 +16,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import {SplashComponent  } from './splash/splash.component';
+import { TermsComponent } from './terms/terms.component';
 
 
 const routes: Routes = [
@@ -80,6 +81,10 @@ const routes: Routes = [
   {
     path:'forum',
     component:ForumsComponent
+  },
+  {
+    path:'terms',
+    component:TermsComponent
   },
 ];
 

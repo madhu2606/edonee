@@ -17,16 +17,7 @@ export class CoursepageComponent implements OnInit {
     public course: CourseService,
     private location: Location,
     private login: LoginService
-  ) {}
-  courseid;
-  coursevideos;
-  userdetails;
-  videoURL = '#';
-  vid;
-  tosubscribe = false;
-
-  registermsg;
-  ngOnInit(): void {
+  ) {
     this.userdetails = this.login.getUserDetails();
     this.route.queryParams
       .filter((params) => params.courseid)
@@ -35,6 +26,30 @@ export class CoursepageComponent implements OnInit {
         this.courseid = params.courseid;
         this.getCourseVideos(this.courseid);
       });
+  }
+  courseid;
+  coursevideos = {
+    "CourseList":  [],
+'NoOfVideos': "",
+"course_id": "",
+"imageUrl": "",
+"mobImageUrl": "",
+"shortDescription": "",
+"subject": "",
+"tutor": "",
+"type": "",
+"video_tile": ""
+  }
+  userdetails;
+  videoURL = '#';
+  vid;
+  tosubscribe = false;
+  
+  registermsg;
+  
+  ngOnInit(): void {
+    // this.coursevideos.subject = ''
+    
   }
 
   uplst(){

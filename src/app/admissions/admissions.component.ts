@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { CourseService } from '../services/course.service';
+declare var $: any;
 
 @Component({
   selector: 'app-admissions',
@@ -37,11 +38,15 @@ export class AdmissionsComponent implements OnInit {
     this.location.back(); // <-- go back to previous location on cancel
   }
   Addadmision(){
-    this.service.Addadmission(this.admissionform.value).subscribe(res=>{
-      console.log(res);
-      this.admissionform.reset()
-    })
-    console.log(this.admissionform.value)
+    $('#myModal').modal('show');
+    if(this.admissionform.valid){
+      this.service.Addadmission(this.admissionform.value).subscribe(res=>{
+        console.log(res);
+        this.admissionform.reset()
+      })
+      console.log(this.admissionform.value)
+    }
+   
 
   }
 }
