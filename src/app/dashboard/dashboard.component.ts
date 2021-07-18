@@ -6,6 +6,7 @@ import { Plugins } from '@capacitor/core';
 
 import { DatePipe } from '@angular/common'
 const { Share } = Plugins;
+declare var $: any;
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -18,9 +19,17 @@ export class DashboardComponent implements OnInit {
   RecomCourse 
   isbday = false
   showMenu = false
+  slideIndex = 0;
+  bn1=true;
+  bn2 = false;
   constructor(private login: LoginService, public course: CourseService, private router: Router,private datePipe: DatePipe) { }
 
   ngOnInit(): void {
+    // this.showSlides();
+    
+    setInterval(()=>{                           // <<<---using ()=> syntax
+      this.showSlides()
+  }, 2000);
     this.userdetails = this.login.getUserDetails();
     if(this.userdetails.data.hasOwnProperty('dob')){
       let date=new Date();
@@ -83,5 +92,15 @@ export class DashboardComponent implements OnInit {
     localStorage.removeItem('token')
     this.router.navigate([''])
   }
+
+  
+
+		 showSlides() {
+      // console.log(this.bn1,this.bn2)
+              this.bn1 = !this.bn1
+              this.bn2 = !this.bn2
+              // console.log(this.bn1,this.bn2)
+					}
+    
 
 }
