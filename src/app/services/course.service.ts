@@ -152,5 +152,12 @@ export class CourseService {
     
     })
   }
+  SendCode(data){
+    return this.http.post(environment.url.referal,data,this.requestOptions).map(res=>{
+      console.log(res)
+      return res
+    
+    })
+  }
 
 }

@@ -1,0 +1,28 @@
+<div class="header">
+    <div class="container">
+        <p class="header_head"><i class="fa fa-chevron-left cust_arrow" (click)="back()"></i>Referral Code
+        </p>
+    </div>
+</div>
+<div class="body">
+    <div class="container" style="
+    margin-bottom: 100%;">
+       	<div class="">
+               <div *ngIf="refDone">
+                <h3>Please enter the referral code below</h3>
+                <div class="form-group">
+                    <label for="usr">Code:</label>
+                    <input type="text" class="form-control" [(ngModel)]="code" id="code" placeholder="Enter Referral Code">
+                    <button type="button" class="btn btn-primary" (click)="sendCode()" id="submit">Submit</button>
+                </div>
+               </div>
+               <div *ngIf="!refDone">
+                   <h3>Referal Code Already Added</h3>
+               </div>
+           
+        </div>
+      
+    </div>
+    <br>
+</div>
+

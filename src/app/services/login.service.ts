@@ -25,7 +25,7 @@ export class LoginService {
     console.log(data);
     return this.http.post(environment.url.login,data,{observe: 'response'}).map(
       res=>{
-      // console.log(res)
+      console.log(res)
         if(res.body['success'] == true){
           localStorage.setItem("token",res.body["token"]);
           

@@ -3,7 +3,7 @@
     <div class="login_form">
         <form   [formGroup]="loginForm"
         (ngSubmit)="Login()">
-        <div *ngIf="isvalid" class="form-group form_grp error-msg">The Username or Password  provided to login doesn't match</div>
+        <div *ngIf="isvalid" class="form-group form_grp alert-info">The Username or Password  provided to login doesn't match</div>
         <div class="form-group form_grp">
             <label for="usr" class="page_label">Email</label>
             <input type="text"  formControlName="username" class="form-control form_fields" id="email" placeholder="eg: example@gmail.com">

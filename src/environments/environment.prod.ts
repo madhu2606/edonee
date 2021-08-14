@@ -17,6 +17,7 @@ export const environment = {
     "replyPost":"https://api.edonee.com:3051/v1.0/forum/reply-post",
     "admissions":"https://api.edonee.com:3051/v1.0/admissions/save",
     "contactUs":"https://api.edonee.com:3051/v1.0/admin/contact-data",
-    "gsign":"https://api.edonee.com:3051/v1.0/profile/token-by-email"
+    "gsign":"https://api.edonee.com:3051/v1.0/profile/token-by-email",
+    "referal":"https://api.edonee.com:3051/v1.0/profile/earn"
   }
 };

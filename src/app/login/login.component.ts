@@ -49,6 +49,8 @@ export class LoginComponent implements AfterViewInit {
      error => {
       // this.isValidUser = this.isValidPass = false
       this.isvalid = true
+
+      console.log(error['error'])
        
       
 

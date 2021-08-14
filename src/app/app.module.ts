@@ -29,6 +29,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { PassComponent } from './pass/pass.component';
 import { ForumsComponent } from './forums/forums.component';
 import { TermsComponent } from './terms/terms.component';
+import { ReferComponent } from './refer/refer.component';
 
 
 @NgModule({ 
@@ -51,6 +52,7 @@ import { TermsComponent } from './terms/terms.component';
     PassComponent,
     ForumsComponent,
     TermsComponent,
+    ReferComponent,
 
   ],
   imports: [

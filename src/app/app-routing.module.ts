@@ -13,6 +13,7 @@ import { LoginComponent } from './login/login.component';
 import { NewsComponent } from './news/news.component';
 import { PassComponent } from './pass/pass.component';
 import { ProfileComponent } from './profile/profile.component';
+import { ReferComponent } from './refer/refer.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthGuardService } from './services/auth-guard.service';
 import {SplashComponent  } from './splash/splash.component';
@@ -85,6 +86,10 @@ const routes: Routes = [
   {
     path:'terms',
     component:TermsComponent
+  },
+  {
+    path:'refer',
+    component:ReferComponent
   },
 ];
 

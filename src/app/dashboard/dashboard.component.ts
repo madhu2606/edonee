@@ -84,7 +84,7 @@ export class DashboardComponent implements OnInit {
     let shareRet =  Share.share({
   title: 'Edonee Refer and Earn',
   text: 'Share and Earn',
-  url: 'http://edonee.com/refer/'+this.userdetails.data.refer_earn
+  url: 'https://edonee.com/refer/'+this.userdetails.data.refer_earn
 });
   }
 
