@@ -13,7 +13,10 @@ declare const gapi: any;
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements AfterViewInit {
-  isvalid = false
+  isvalid = false;
+   showOTP = false;
+   wrngO= false
+
   
   public auth2: any;
   constructor(
@@ -29,12 +32,13 @@ export class LoginComponent implements AfterViewInit {
 
   loginForm = new FormGroup({
     username: new FormControl('',Validators.required),
-    password: new FormControl('',Validators.required)
+    otp: new FormControl('',Validators.required)
   });
 
-
-  Login(){
-    
+  newLogin(e){
+    e.preventDefault();
+    console.log(this.loginForm.value)
+    console.log('2')
      this.login.Login(this.loginForm.value).subscribe(
     res=>{
        console.log((res));
@@ -56,6 +60,19 @@ export class LoginComponent implements AfterViewInit {
 
     }
      );
+
+  }
+  Login(){
+    this.showOTP = true
+    console.log(this.loginForm.value)
+    console.log('1')
+    let bdy = {
+      "number":this.loginForm.value.username
+    }
+    this.login.sendOTP(bdy).subscribe(res=>{
+      console.log(res)
+    })
+ 
   }
  
 

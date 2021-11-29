@@ -55,6 +55,15 @@ export class LoginService {
       
     });
   }
+  sendOTP(data){
+    return this.http.post(environment.url.otp,data,{observe: 'response'}).map(
+      res=>{
+      // console.log(res)
+      return res.body
+      
+    });
+  }
+
 
   googlesign(data){
     return this.http.post(environment.url.gsign,data,{observe: 'response'}).map(

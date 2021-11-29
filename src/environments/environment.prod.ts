@@ -18,6 +18,8 @@ export const environment = {
     "admissions":"https://api.edonee.com:3051/v1.0/admissions/save",
     "contactUs":"https://api.edonee.com:3051/v1.0/admin/contact-data",
     "gsign":"https://api.edonee.com:3051/v1.0/profile/token-by-email",
-    "referal":"https://api.edonee.com:3051/v1.0/profile/earn"
+    "referal":"https://api.edonee.com:3051/v1.0/profile/earn",
+    "otp":"https://api.edonee.com:3051/v1.0/otp/send-sms"
+
   }
 };
